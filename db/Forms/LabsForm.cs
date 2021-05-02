@@ -1,4 +1,5 @@
 ﻿using db.Context;
+using db.Controls;
 using db.Lab2;
 using db.Lab3;
 using db.Lab4;
@@ -22,14 +23,17 @@ namespace db.Forms
         private const string SECOND_LAB = "second";      
         private const string THIRD_LAB = "third";      
         private const string FOURTH_LAB = "fouth";      
-        private const string FIFTH_LAB = "fifth";      
-        
+        private const string FIFTH_LAB = "fifth";
+        private const string NINETH_LAB = "fifth";
+
+
         public LabsForm()
         {
             InitializeComponent();
-            labByName.Add(SECOND_LAB, new CashierControlLab2() {Dock = DockStyle.Fill });
-            labByName.Add(THIRD_LAB, new Lab3Control() {Dock = DockStyle.Fill });
-            labByName.Add(FOURTH_LAB, new DataViewControlLab4() {Dock = DockStyle.Fill });
+            labByName.Add(SECOND_LAB, new CashierControlLab2() { Dock = DockStyle.Fill });
+            labByName.Add(THIRD_LAB, new Lab3Control() { Dock = DockStyle.Fill });
+            labByName.Add(FOURTH_LAB, new DataViewControlLab4() { Dock = DockStyle.Fill });
+            labByName.Add(NINETH_LAB, new db.Lab9.CashiersControl() { Dock = DockStyle.Fill });
         }
 
 
@@ -49,6 +53,13 @@ namespace db.Forms
         {
             labPanel.Controls.Clear();
             labPanel.Controls.Add(labByName[FOURTH_LAB]);
+        }
+
+        private void ninethLab_Click(object sender, EventArgs e)
+        {
+            labPanel.Controls.Clear();
+            labPanel.Controls.Add(labByName[NINETH_LAB]);
+
         }
     }
 }

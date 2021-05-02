@@ -30,10 +30,10 @@ namespace db.Controls
             }
             set 
             {
-                id = value.Id;
-                firstNameTB.Text = value.FirstName;
-                surnameTB.Text = value.Surname; 
-                middleNameTB.Text = value.MiddleName; 
+                id = value?.Id ?? -1;
+                firstNameTB.Text = value?.FirstName ?? string.Empty ;
+                surnameTB.Text = value?.Surname ?? string.Empty; 
+                middleNameTB.Text = value?.MiddleName ?? string.Empty; 
             }
         }
         public CashierControl()

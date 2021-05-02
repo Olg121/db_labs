@@ -38,6 +38,7 @@ namespace db.Forms
             this.fouthLabBtn = new System.Windows.Forms.Button();
             this.fifthLabBtn = new System.Windows.Forms.Button();
             this.labPanel = new System.Windows.Forms.Panel();
+            this.ninethLab = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@ namespace db.Forms
             this.flowLayoutPanel1.Controls.Add(this.thirdLabBtn);
             this.flowLayoutPanel1.Controls.Add(this.fouthLabBtn);
             this.flowLayoutPanel1.Controls.Add(this.fifthLabBtn);
+            this.flowLayoutPanel1.Controls.Add(this.ninethLab);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(826, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -104,6 +106,17 @@ namespace db.Forms
             this.labPanel.Size = new System.Drawing.Size(826, 450);
             this.labPanel.TabIndex = 1;
             // 
+            // ninethLab
+            // 
+            this.ninethLab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ninethLab.Location = new System.Drawing.Point(3, 119);
+            this.ninethLab.Name = "ninethLab";
+            this.ninethLab.Size = new System.Drawing.Size(102, 23);
+            this.ninethLab.TabIndex = 5;
+            this.ninethLab.Text = "Лаба9";
+            this.ninethLab.UseVisualStyleBackColor = true;
+            this.ninethLab.Click += new System.EventHandler(this.ninethLab_Click);
+            // 
             // LabsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -126,6 +139,7 @@ namespace db.Forms
         private System.Windows.Forms.Button fouthLabBtn;
         private System.Windows.Forms.Button fifthLabBtn;
         private System.Windows.Forms.Panel labPanel;
+        private System.Windows.Forms.Button ninethLab;
     }
 }
 

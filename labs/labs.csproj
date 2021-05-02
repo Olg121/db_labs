@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\DbContext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InternetShopDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Lab9\LinqExprs.cs" />
     <Compile Include="Model\BrandName.cs" />
     <Compile Include="Model\Cashier.cs" />
     <Compile Include="Model\Constants.cs" />

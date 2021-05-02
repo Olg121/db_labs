@@ -30,39 +30,18 @@ namespace db.Controls.DataGrids
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.FirtsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MiddleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirtsName,
-            this.Surname,
-            this.MiddleName});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(420, 89);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(556, 89);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // FirtsName
-            // 
-            this.FirtsName.HeaderText = "Имя";
-            this.FirtsName.Name = "FirtsName";
-            // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "Фамилия";
-            this.Surname.Name = "Surname";
-            // 
-            // MiddleName
-            // 
-            this.MiddleName.HeaderText = "Отчество";
-            this.MiddleName.Name = "MiddleName";
             // 
             // CashierGrid
             // 
@@ -70,7 +49,8 @@ namespace db.Controls.DataGrids
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
             this.Name = "CashierGrid";
-            this.Size = new System.Drawing.Size(420, 89);
+            this.Size = new System.Drawing.Size(556, 89);
+            this.Load += new System.EventHandler(this.CashierGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -79,8 +59,5 @@ namespace db.Controls.DataGrids
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirtsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MiddleName;
     }
 }

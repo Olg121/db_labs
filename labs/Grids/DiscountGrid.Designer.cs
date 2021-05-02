@@ -52,16 +52,16 @@ namespace labs.Grids
             this.internetShopDataSet = new labs.InternetShopDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.discountDataGridView = new System.Windows.Forms.DataGridView();
-            this.discountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.discountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.discountTableAdapter = new labs.InternetShopDataSetTableAdapters.DiscountTableAdapter();
-            this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
-            this.productTableAdapter = new labs.InternetShopDataSetTableAdapters.ProductTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.discountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.discountTableAdapter = new labs.InternetShopDataSetTableAdapters.DiscountTableAdapter();
+            this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
+            this.productTableAdapter = new labs.InternetShopDataSetTableAdapters.ProductTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.discountBindingNavigator)).BeginInit();
             this.discountBindingNavigator.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -236,13 +236,13 @@ namespace labs.Grids
             // comboBox1
             // 
             this.comboBox1.DataSource = this.productBindingSource;
-            this.comboBox1.DisplayMember = "Id";
+            this.comboBox1.DisplayMember = "Name";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(3, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.ValueMember = "Name";
+            this.comboBox1.ValueMember = "Id";
             // 
             // productBindingSource
             // 
@@ -281,35 +281,6 @@ namespace labs.Grids
             this.discountDataGridView.Size = new System.Drawing.Size(800, 364);
             this.discountDataGridView.TabIndex = 2;
             // 
-            // discountBindingSource1
-            // 
-            this.discountBindingSource1.DataMember = "FK_Product_Discount";
-            this.discountBindingSource1.DataSource = this.productBindingSource;
-            // 
-            // discountBindingSource
-            // 
-            this.discountBindingSource.DataMember = "Discount";
-            this.discountBindingSource.DataSource = this.internetShopDataSet;
-            // 
-            // discountTableAdapter
-            // 
-            this.discountTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BrandNameTableAdapter = null;
-            this.tableAdapterManager.CashierTableAdapter = null;
-            this.tableAdapterManager.DiscountTableAdapter = this.discountTableAdapter;
-            this.tableAdapterManager.ProductReceiptsHistoryTableAdapter = null;
-            this.tableAdapterManager.ProductSalesHistoryTableAdapter = null;
-            this.tableAdapterManager.ProductTableAdapter = this.productTableAdapter;
-            this.tableAdapterManager.UpdateOrder = labs.InternetShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -341,6 +312,35 @@ namespace labs.Grids
             this.dataGridViewTextBoxColumn5.DataPropertyName = "DateTo";
             this.dataGridViewTextBoxColumn5.HeaderText = "DateTo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // discountBindingSource1
+            // 
+            this.discountBindingSource1.DataMember = "FK_Product_Discount";
+            this.discountBindingSource1.DataSource = this.productBindingSource;
+            // 
+            // discountBindingSource
+            // 
+            this.discountBindingSource.DataMember = "Discount";
+            this.discountBindingSource.DataSource = this.internetShopDataSet;
+            // 
+            // discountTableAdapter
+            // 
+            this.discountTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BrandNameTableAdapter = null;
+            this.tableAdapterManager.CashierTableAdapter = null;
+            this.tableAdapterManager.DiscountTableAdapter = this.discountTableAdapter;
+            this.tableAdapterManager.ProductReceiptsHistoryTableAdapter = null;
+            this.tableAdapterManager.ProductSalesHistoryTableAdapter = null;
+            this.tableAdapterManager.ProductTableAdapter = this.productTableAdapter;
+            this.tableAdapterManager.UpdateOrder = labs.InternetShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // DiscountGrid
             // 

@@ -4,6 +4,10 @@
 
     partial class InternetShopDataSet
     {
+        partial class DisplayProductDataTable
+        {
+        }
+
         partial class ProductDataTable
         {
         }

@@ -204,7 +204,18 @@ SELECT Id, Name, BrandNameId, Price FROM Product WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="BrandNameId" DataSetColumn="BrandNameId" />
               <Mapping SourceColumn="Price" DataSetColumn="Price" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="InternetShopConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Product.Id, Product.Name, Product.BrandNameId, Product.Price, BrandName.Name AS BrandName
+FROM            Product INNER JOIN
+                         BrandName ON Product.BrandNameId = BrandName.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductReceiptsHistoryTableAdapter" GeneratorDataComponentClassName="ProductReceiptsHistoryTableAdapter" Name="ProductReceiptsHistory" UserDataComponentName="ProductReceiptsHistoryTableAdapter">
             <MainSource>
@@ -426,6 +437,7 @@ SELECT Id, Name, BrandNameId, Price FROM Product WHERE (Id = @Id)</CommandText>
               </xs:element>
               <xs:element name="BrandNameId" msprop:Generator_ColumnVarNameInTable="columnBrandNameId" msprop:Generator_ColumnPropNameInRow="BrandNameId" msprop:Generator_ColumnPropNameInTable="BrandNameIdColumn" msprop:Generator_UserColumnName="BrandNameId" type="xs:int" />
               <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" />
+              <xs:element name="BrandName" msprop:Generator_ColumnVarNameInTable="columnBrandName" msprop:Generator_ColumnPropNameInRow="BrandName" msprop:Generator_ColumnPropNameInTable="BrandNameColumn" msprop:Generator_UserColumnName="BrandName" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -31,10 +31,6 @@ namespace labs.Grids
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrandGrid));
-            this.internetShopDataSet = new labs.InternetShopDataSet();
-            this.brandNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.brandNameTableAdapter = new labs.InternetShopDataSetTableAdapters.BrandNameTableAdapter();
-            this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
             this.brandNameBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -52,37 +48,16 @@ namespace labs.Grids
             this.brandNameDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).BeginInit();
+            this.brandNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internetShopDataSet = new labs.InternetShopDataSet();
+            this.brandNameTableAdapter = new labs.InternetShopDataSetTableAdapters.BrandNameTableAdapter();
+            this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingNavigator)).BeginInit();
             this.brandNameBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // internetShopDataSet
-            // 
-            this.internetShopDataSet.DataSetName = "InternetShopDataSet";
-            this.internetShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // brandNameBindingSource
-            // 
-            this.brandNameBindingSource.DataMember = "BrandName";
-            this.brandNameBindingSource.DataSource = this.internetShopDataSet;
-            // 
-            // brandNameTableAdapter
-            // 
-            this.brandNameTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BrandNameTableAdapter = this.brandNameTableAdapter;
-            this.tableAdapterManager.CashierTableAdapter = null;
-            this.tableAdapterManager.DiscountTableAdapter = null;
-            this.tableAdapterManager.ProductReceiptsHistoryTableAdapter = null;
-            this.tableAdapterManager.ProductSalesHistoryTableAdapter = null;
-            this.tableAdapterManager.ProductTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = labs.InternetShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // brandNameBindingNavigator
             // 
@@ -171,6 +146,7 @@ namespace labs.Grids
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -253,6 +229,31 @@ namespace labs.Grids
             this.dataGridViewTextBoxColumn2.HeaderText = "Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
+            // brandNameBindingSource
+            // 
+            this.brandNameBindingSource.DataMember = "BrandName";
+            this.brandNameBindingSource.DataSource = this.internetShopDataSet;
+            // 
+            // internetShopDataSet
+            // 
+            this.internetShopDataSet.DataSetName = "InternetShopDataSet";
+            this.internetShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // brandNameTableAdapter
+            // 
+            this.brandNameTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BrandNameTableAdapter = this.brandNameTableAdapter;
+            this.tableAdapterManager.CashierTableAdapter = null;
+            this.tableAdapterManager.DiscountTableAdapter = null;
+            this.tableAdapterManager.ProductReceiptsHistoryTableAdapter = null;
+            this.tableAdapterManager.ProductSalesHistoryTableAdapter = null;
+            this.tableAdapterManager.ProductTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = labs.InternetShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // BrandGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,12 +264,12 @@ namespace labs.Grids
             this.Name = "BrandGrid";
             this.Text = "BrandGrid";
             this.Load += new System.EventHandler(this.BrandGrid_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingNavigator)).EndInit();
             this.brandNameBindingNavigator.ResumeLayout(false);
             this.brandNameBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

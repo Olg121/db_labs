@@ -17,24 +17,14 @@ namespace labs.Grids
             InitializeComponent();
         }
 
-        private void productBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
-
-        }
-
         private void ProductsDetails_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
-            // TODO: This line of code loads data into the 'internetShopDataSet.BrandName' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'internetShopDataSet.ProductReceiptsHistory' table. You can move, or remove it, as needed.
             this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
 
+            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.FillBy(this.internetShopDataSet.Product);
+            // TODO: This line of code loads data into the 'internetShopDataSet.BrandName' table. You can move, or remove it, as needed.
         }
 
         private void productBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
@@ -51,6 +41,50 @@ namespace labs.Grids
             this.productBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
 
+        }
+
+        private void productBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
+
+        }
+
+        private void productBindingNavigatorSaveItem_Click_4(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
+
+        }
+
+        private void productBindingNavigatorSaveItem_Click_5(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
+
+        }
+
+        private void productBindingNavigatorSaveItem_Click_6(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.internetShopDataSet);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var brandName = new BrandNameLite();
+
+            var dialogResult = brandName.ShowDialog(); 
+            if (dialogResult == DialogResult.OK)
+            {
+                this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
+                this.productTableAdapter.FillBy(this.internetShopDataSet.Product);
+            }
         }
     }
 }

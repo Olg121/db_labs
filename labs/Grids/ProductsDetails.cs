@@ -86,5 +86,16 @@ namespace labs.Grids
                 this.productTableAdapter.FillBy(this.internetShopDataSet.Product);
             }
         }
+
+        public string ProductName { get => this.nameTextBox.Text; }
+
+        private ProductRecepy reportForm { get; set; } 
+        private void productRecepyBtn_Click(object sender, EventArgs e)
+        {
+            if (reportForm is null)
+                reportForm = new ProductRecepy();
+            reportForm.ShowDialog(this); 
+
+        }
     }
 }

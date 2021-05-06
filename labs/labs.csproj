@@ -115,6 +115,18 @@
     <Compile Include="Grids\ProductReceiptsGrid.Designer.cs">
       <DependentUpon>ProductReceiptsGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grids\ProductRecepy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\ProductRecepy.Designer.cs">
+      <DependentUpon>ProductRecepy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grids\ProductSaleCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\ProductSaleCard.Designer.cs">
+      <DependentUpon>ProductSaleCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grids\ProductSaleGrid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     <EmbeddedResource Include="Grids\ProductReceiptsGrid.resx">
       <DependentUpon>ProductReceiptsGrid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Grids\ProductRecepy.resx">
+      <DependentUpon>ProductRecepy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grids\ProductSaleCard.resx">
+      <DependentUpon>ProductSaleCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Grids\ProductSaleGrid.resx">
       <DependentUpon>ProductSaleGrid.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +212,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report\CashierReportTemplate.rdlc" />
+    <EmbeddedResource Include="Report\ProductRecepyReportTemplate.rdlc" />
     <None Include="InternetShopDataSet.xsc">
       <DependentUpon>InternetShopDataSet.xsd</DependentUpon>
     </None>

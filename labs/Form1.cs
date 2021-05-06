@@ -27,7 +27,7 @@ namespace labs
             { "ProductReceipts" ,typeof(ProductReceiptsGrid) },
             { "ProductSale" , typeof(ProductSaleGrid)},
             { "ProductsDetails" , typeof(ProductsDetails)},
-            { "CashierReport", typeof(CashierReport) }
+            { "CashierReport", typeof(CashierReport) },
         };
 
         private List<Form> Forms { get; set; } = new List<Form>();
@@ -88,6 +88,11 @@ namespace labs
         private void button8_Click(object sender, EventArgs e)
         {
             OpenForm("CashierReport");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+           //penForm("CashierRecepy");
         }
     }
 }

@@ -38,19 +38,18 @@ namespace labs
             source.MoveLast();
         }
 
-        public static void AddNewItem(BindingSource source, TableAdapterManager tableAdapterManager, InternetShopDataSet dataSet)
+        public static void AddNewItem(BindingSource source)
         {
             source.AddNew();
-            source.EndEdit();
           //  source.AddNew();
         }
-        public static void RemoveCurrent(BindingSource source, TableAdapterManager tableAdapterManager, InternetShopDataSet dataSet)
+        public static void RemoveCurrent(BindingSource source)
         {
             var cur = source.Current;
             source.Remove(cur);
         }
 
-        public static void UndoChanges(BindingSource source, TableAdapterManager tableAdapterManager, InternetShopDataSet dataSet)
+        public static void UndoChanges(InternetShopDataSet dataSet)
         {
             dataSet.RejectChanges();
            // source.ResetBindings(false); 

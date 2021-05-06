@@ -104,7 +104,53 @@ namespace labs.Grids
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            GridHelper.UndoChanges(discountBindingSource, tableAdapterManager, internetShopDataSet);
+            GridHelper.UndoChanges( internetShopDataSet);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GridHelper.MoveFirst(discountBindingSource);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            GridHelper.Save(discountBindingSource, tableAdapterManager, internetShopDataSet);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            GridHelper.RemoveCurrent(discountBindingSource);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GridHelper.AddNewItem(discountBindingSource);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GridHelper.MoveLast(discountBindingSource);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GridHelper.MovePrew(discountBindingSource);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GridHelper.MoveNext(discountBindingSource);
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            GridHelper.UndoChanges(internetShopDataSet);
+        }
+
+
     }
 }

@@ -30,11 +30,11 @@ namespace labs.Grids
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsDetails));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label priceLabel;
             System.Windows.Forms.Label brandNameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsDetails));
             this.productBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,6 +61,7 @@ namespace labs.Grids
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.brandNameComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.productRecepyBtn = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             priceLabel = new System.Windows.Forms.Label();
@@ -72,6 +73,42 @@ namespace labs.Grids
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(12, 80);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 2;
+            idLabel.Text = "Id:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(12, 106);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 4;
+            nameLabel.Text = "Name:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(12, 129);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(34, 13);
+            priceLabel.TabIndex = 8;
+            priceLabel.Text = "Price:";
+            // 
+            // brandNameLabel
+            // 
+            brandNameLabel.AutoSize = true;
+            brandNameLabel.Location = new System.Drawing.Point(12, 155);
+            brandNameLabel.Name = "brandNameLabel";
+            brandNameLabel.Size = new System.Drawing.Size(69, 13);
+            brandNameLabel.TabIndex = 10;
+            brandNameLabel.Text = "Brand Name:";
             // 
             // productBindingNavigator
             // 
@@ -170,6 +207,7 @@ namespace labs.Grids
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -247,15 +285,6 @@ namespace labs.Grids
             this.brandNameBindingSource1.DataMember = "BrandName";
             this.brandNameBindingSource1.DataSource = this.internetShopDataSet;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(12, 80);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 2;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Id", true));
@@ -263,15 +292,6 @@ namespace labs.Grids
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(121, 20);
             this.idTextBox.TabIndex = 3;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(12, 106);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 4;
-            nameLabel.Text = "Name:";
             // 
             // nameTextBox
             // 
@@ -281,15 +301,6 @@ namespace labs.Grids
             this.nameTextBox.Size = new System.Drawing.Size(121, 20);
             this.nameTextBox.TabIndex = 5;
             // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(12, 129);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(34, 13);
-            priceLabel.TabIndex = 8;
-            priceLabel.Text = "Price:";
-            // 
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Price", true));
@@ -297,15 +308,6 @@ namespace labs.Grids
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(121, 20);
             this.priceTextBox.TabIndex = 9;
-            // 
-            // brandNameLabel
-            // 
-            brandNameLabel.AutoSize = true;
-            brandNameLabel.Location = new System.Drawing.Point(12, 155);
-            brandNameLabel.Name = "brandNameLabel";
-            brandNameLabel.Size = new System.Drawing.Size(69, 13);
-            brandNameLabel.TabIndex = 10;
-            brandNameLabel.Text = "Brand Name:";
             // 
             // brandNameComboBox
             // 
@@ -330,11 +332,22 @@ namespace labs.Grids
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // productRecepyBtn
+            // 
+            this.productRecepyBtn.Location = new System.Drawing.Point(15, 179);
+            this.productRecepyBtn.Name = "productRecepyBtn";
+            this.productRecepyBtn.Size = new System.Drawing.Size(205, 23);
+            this.productRecepyBtn.TabIndex = 13;
+            this.productRecepyBtn.Text = "Справка о товаре";
+            this.productRecepyBtn.UseVisualStyleBackColor = true;
+            this.productRecepyBtn.Click += new System.EventHandler(this.productRecepyBtn_Click);
+            // 
             // ProductsDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.productRecepyBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -388,5 +401,6 @@ namespace labs.Grids
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.ComboBox brandNameComboBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button productRecepyBtn;
     }
 }

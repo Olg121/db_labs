@@ -63,6 +63,8 @@ namespace labs.Grids
         private void button8_Click(object sender, EventArgs e)
         {
             GridHelper.UndoChanges(internetShopDataSet);
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,6 +99,8 @@ namespace labs.Grids
         private void button7_Click(object sender, EventArgs e)
         {
             GridHelper.Save(brandNameBindingSource, tableAdapterManager, internetShopDataSet);
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

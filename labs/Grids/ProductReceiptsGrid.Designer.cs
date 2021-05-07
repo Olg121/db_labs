@@ -30,26 +30,8 @@ namespace labs.Grids
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductReceiptsGrid));
-            this.productReceiptsHistoryBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.productReceiptsHistoryBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.discountDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countOfReceiptsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productReceiptsHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internetShopDataSet = new labs.InternetShopDataSet();
@@ -59,181 +41,45 @@ namespace labs.Grids
             this.productTableAdapter = new labs.InternetShopDataSetTableAdapters.ProductTableAdapter();
             this.productReceiptsHistoryTableAdapter = new labs.InternetShopDataSetTableAdapters.ProductReceiptsHistoryTableAdapter();
             this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.productCB = new System.Windows.Forms.ComboBox();
+            this.updateProductBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.countLbl = new System.Windows.Forms.Label();
+            this.productCountUpDown = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.productReceiptsHistoryBindingNavigator)).BeginInit();
-            this.productReceiptsHistoryBindingNavigator.SuspendLayout();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countOfReceiptsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.discountDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productReceiptsHistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productCountUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productReceiptsHistoryBindingNavigator
-            // 
-            this.productReceiptsHistoryBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.productReceiptsHistoryBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productReceiptsHistoryBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.productReceiptsHistoryBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.productReceiptsHistoryBindingNavigatorSaveItem,
-            this.toolStripButton1});
-            this.productReceiptsHistoryBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.productReceiptsHistoryBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.productReceiptsHistoryBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.productReceiptsHistoryBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.productReceiptsHistoryBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.productReceiptsHistoryBindingNavigator.Name = "productReceiptsHistoryBindingNavigator";
-            this.productReceiptsHistoryBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productReceiptsHistoryBindingNavigator.Size = new System.Drawing.Size(800, 25);
-            this.productReceiptsHistoryBindingNavigator.TabIndex = 0;
-            this.productReceiptsHistoryBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // productReceiptsHistoryBindingNavigatorSaveItem
-            // 
-            this.productReceiptsHistoryBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productReceiptsHistoryBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productReceiptsHistoryBindingNavigatorSaveItem.Image")));
-            this.productReceiptsHistoryBindingNavigatorSaveItem.Name = "productReceiptsHistoryBindingNavigatorSaveItem";
-            this.productReceiptsHistoryBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.productReceiptsHistoryBindingNavigatorSaveItem.Text = "Save Data";
-            this.productReceiptsHistoryBindingNavigatorSaveItem.Click += new System.EventHandler(this.productReceiptsHistoryBindingNavigatorSaveItem_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.discountDataGridView);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 425);
+            this.panel1.Size = new System.Drawing.Size(492, 450);
             this.panel1.TabIndex = 3;
             // 
             // discountDataGridView
@@ -246,30 +92,10 @@ namespace labs.Grids
             this.countOfReceiptsDataGridViewTextBoxColumn});
             this.discountDataGridView.DataSource = this.productReceiptsHistoryBindingSource;
             this.discountDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.discountDataGridView.Location = new System.Drawing.Point(0, 40);
+            this.discountDataGridView.Location = new System.Drawing.Point(0, 0);
             this.discountDataGridView.Name = "discountDataGridView";
-            this.discountDataGridView.Size = new System.Drawing.Size(800, 385);
+            this.discountDataGridView.Size = new System.Drawing.Size(492, 375);
             this.discountDataGridView.TabIndex = 1;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // countOfReceiptsDataGridViewTextBoxColumn
-            // 
-            this.countOfReceiptsDataGridViewTextBoxColumn.DataPropertyName = "CountOfReceipts";
-            this.countOfReceiptsDataGridViewTextBoxColumn.HeaderText = "CountOfReceipts";
-            this.countOfReceiptsDataGridViewTextBoxColumn.Name = "countOfReceiptsDataGridViewTextBoxColumn";
             // 
             // productReceiptsHistoryBindingSource
             // 
@@ -290,11 +116,12 @@ namespace labs.Grids
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(492, 75);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -336,99 +163,179 @@ namespace labs.Grids
             this.tableAdapterManager.ProductTableAdapter = this.productTableAdapter;
             this.tableAdapterManager.UpdateOrder = labs.InternetShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // button8
+            // panel2
             // 
-            this.button8.Location = new System.Drawing.Point(532, 94);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Отмена";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.panel2.Controls.Add(this.discountDataGridView);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 75);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(492, 375);
+            this.panel2.TabIndex = 18;
             // 
-            // button7
+            // panel3
             // 
-            this.button7.Location = new System.Drawing.Point(451, 94);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "Сохранить";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.panel3.Controls.Add(this.flowLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(270, 75);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(222, 375);
+            this.panel3.TabIndex = 19;
             // 
-            // button6
+            // flowLayoutPanel2
             // 
-            this.button6.Location = new System.Drawing.Point(366, 94);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(81, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Удалить";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.flowLayoutPanel2.Controls.Add(this.label2);
+            this.flowLayoutPanel2.Controls.Add(this.label3);
+            this.flowLayoutPanel2.Controls.Add(this.panel4);
+            this.flowLayoutPanel2.Controls.Add(this.countLbl);
+            this.flowLayoutPanel2.Controls.Add(this.productCountUpDown);
+            this.flowLayoutPanel2.Controls.Add(this.button1);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(222, 375);
+            this.flowLayoutPanel2.TabIndex = 0;
             // 
-            // button5
+            // label2
             // 
-            this.button5.Location = new System.Drawing.Point(279, 94);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 23);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Добавить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Новое поступление";
             // 
-            // button4
+            // panel4
             // 
-            this.button4.Location = new System.Drawing.Point(532, 65);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Последняя";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.panel4.Controls.Add(this.productCB);
+            this.panel4.Controls.Add(this.updateProductBtn);
+            this.panel4.Location = new System.Drawing.Point(10, 41);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10, 3, 5, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(203, 27);
+            this.panel4.TabIndex = 12;
             // 
-            // button3
+            // productCB
             // 
-            this.button3.Location = new System.Drawing.Point(366, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Пред";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.productCB.DataSource = this.productBindingSource1;
+            this.productCB.DisplayMember = "Name";
+            this.productCB.FormattingEnabled = true;
+            this.productCB.Location = new System.Drawing.Point(3, 3);
+            this.productCB.Margin = new System.Windows.Forms.Padding(10, 3, 5, 0);
+            this.productCB.Name = "productCB";
+            this.productCB.Size = new System.Drawing.Size(146, 21);
+            this.productCB.TabIndex = 2;
+            this.productCB.ValueMember = "Id";
             // 
-            // button2
+            // updateProductBtn
             // 
-            this.button2.Location = new System.Drawing.Point(451, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "След";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.updateProductBtn.Location = new System.Drawing.Point(157, 3);
+            this.updateProductBtn.Name = "updateProductBtn";
+            this.updateProductBtn.Size = new System.Drawing.Size(41, 21);
+            this.updateProductBtn.TabIndex = 11;
+            this.updateProductBtn.Text = "Изм.";
+            this.updateProductBtn.UseVisualStyleBackColor = true;
+            this.updateProductBtn.Click += new System.EventHandler(this.updateProductBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Продукт";
+            // 
+            // countLbl
+            // 
+            this.countLbl.AutoSize = true;
+            this.countLbl.Location = new System.Drawing.Point(10, 73);
+            this.countLbl.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
+            this.countLbl.Name = "countLbl";
+            this.countLbl.Size = new System.Drawing.Size(66, 13);
+            this.countLbl.TabIndex = 13;
+            this.countLbl.Text = "Количество";
+            // 
+            // productCountUpDown
+            // 
+            this.productCountUpDown.Location = new System.Drawing.Point(10, 89);
+            this.productCountUpDown.Margin = new System.Windows.Forms.Padding(10, 3, 5, 0);
+            this.productCountUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.productCountUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.productCountUpDown.Name = "productCountUpDown";
+            this.productCountUpDown.Size = new System.Drawing.Size(203, 20);
+            this.productCountUpDown.TabIndex = 14;
+            this.productCountUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(279, 65);
+            this.button1.Location = new System.Drawing.Point(10, 114);
+            this.button1.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Первая";
+            this.button1.Size = new System.Drawing.Size(203, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Новое поступление";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "Product";
+            this.productBindingSource1.DataSource = this.internetShopDataSet;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 43);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 21);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Изменить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.updateProductBtn_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            this.productIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // countOfReceiptsDataGridViewTextBoxColumn
+            // 
+            this.countOfReceiptsDataGridViewTextBoxColumn.DataPropertyName = "CountOfReceipts";
+            this.countOfReceiptsDataGridViewTextBoxColumn.HeaderText = "Товаров поступило";
+            this.countOfReceiptsDataGridViewTextBoxColumn.Name = "countOfReceiptsDataGridViewTextBoxColumn";
             // 
             // ProductReceiptsGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(492, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.productReceiptsHistoryBindingNavigator);
             this.Name = "ProductReceiptsGrid";
-            this.Text = "ProductReceiptsGrid";
+            this.Text = "Поступление товаров";
             this.Load += new System.EventHandler(this.ProductReceiptsGrid_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productReceiptsHistoryBindingNavigator)).EndInit();
-            this.productReceiptsHistoryBindingNavigator.ResumeLayout(false);
-            this.productReceiptsHistoryBindingNavigator.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.discountDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productReceiptsHistoryBindingSource)).EndInit();
@@ -436,25 +343,18 @@ namespace labs.Grids
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.productCountUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingNavigator productReceiptsHistoryBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton productReceiptsHistoryBindingNavigatorSaveItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView discountDataGridView;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -466,17 +366,21 @@ namespace labs.Grids
         private System.Windows.Forms.BindingSource productReceiptsHistoryBindingSource;
         private InternetShopDataSetTableAdapters.ProductReceiptsHistoryTableAdapter productReceiptsHistoryTableAdapter;
         private InternetShopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox productCB;
+        private System.Windows.Forms.Button updateProductBtn;
+        private System.Windows.Forms.Label countLbl;
+        private System.Windows.Forms.NumericUpDown productCountUpDown;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource productBindingSource1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countOfReceiptsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -30,16 +30,6 @@ namespace InternetShop.Forms
 
         private void SellHistoryGrid_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'internetShopDataSet.Cashier' table. You can move, or remove it, as needed.
-
-            this.cashierTableAdapter.Fill(this.internetShopDataSet.Cashier);
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
-            // TODO: This line of code loads data into the 'internetShopDataSet.FullProductSaleHistory' table. You can move, or remove it, as needed.
-            this.fullProductSaleHistoryTableAdapter.Fill(this.internetShopDataSet.FullProductSaleHistory);
-            // TODO: This line of code loads data into the 'internetShopDataSet.ProductSalesHistory' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'internetShopDataSet.ProductSalesHistory' table. You can move, or remove it, as needed.
-            this.productSalesHistoryTableAdapter.Fill(this.internetShopDataSet.ProductSalesHistory);
             RefreshData();
         }
 
@@ -95,12 +85,20 @@ namespace InternetShop.Forms
 
         private void updateProductBtn_Click(object sender, EventArgs e)
         {
-
+            var form = new labs.Grids.ProductGrid();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                RefreshData();
+            }
         }
 
         private void updateCashierBtn_Click(object sender, EventArgs e)
         {
-
+            var form = new labs.Grids.CashierGrid();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                RefreshData();
+            }
         }
     }
 }

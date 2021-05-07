@@ -49,5 +49,29 @@ namespace InternetShop
             var form = new SellHistoryGrid();
             form.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form = new ProductGrid();
+            form.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var form = new BrandGrid();
+            form.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var form = new DiscountGrid();
+            form.ShowDialog();
+        }
+
+        private void productsIncomeHistoryBtn_Click(object sender, EventArgs e)
+        {
+            var form = new ProductReceiptsGrid();
+            form.ShowDialog();
+        }
     }
 }

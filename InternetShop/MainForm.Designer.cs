@@ -104,6 +104,7 @@ namespace InternetShop
             this.productsIncomeHistoryBtn.TabIndex = 3;
             this.productsIncomeHistoryBtn.Text = "Поступления";
             this.productsIncomeHistoryBtn.UseVisualStyleBackColor = true;
+            this.productsIncomeHistoryBtn.Click += new System.EventHandler(this.productsIncomeHistoryBtn_Click);
             // 
             // productsSellHistoryBtn
             // 
@@ -144,6 +145,7 @@ namespace InternetShop
             this.button6.TabIndex = 5;
             this.button6.Text = "Бренды";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -153,6 +155,7 @@ namespace InternetShop
             this.button4.TabIndex = 4;
             this.button4.Text = "Скидки";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -162,6 +165,7 @@ namespace InternetShop
             this.button3.TabIndex = 3;
             this.button3.Text = "Продукты";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 

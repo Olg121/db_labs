@@ -28,6 +28,11 @@ namespace labs.Grids
         private void ProductGrid_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
+            Refresh();
+        }
+
+        private void Refresh()
+        {
             this.productTableAdapter.Fill(this.internetShopDataSet.Product);
             // TODO: This line of code loads data into the 'internetShopDataSet.BrandName' table. You can move, or remove it, as needed.
             this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
@@ -79,60 +84,33 @@ namespace labs.Grids
 
         }
 
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-         //   GridHelper.RemoveCurrent(productBindingSource, tableAdapterManager, internetShopDataSet);
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            GridHelper.UndoChanges( internetShopDataSet);
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GridHelper.MoveFirst(productBindingSource);
-        }
+      
 
         private void button7_Click(object sender, EventArgs e)
         {
             GridHelper.Save(productBindingSource, tableAdapterManager, internetShopDataSet);
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            GridHelper.RemoveCurrent(productBindingSource);
+  
 
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            GridHelper.AddNewItem(productBindingSource);
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            GridHelper.MoveLast(productBindingSource);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            GridHelper.MovePrew(productBindingSource);
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            GridHelper.MoveNext(productBindingSource);
-
-        }
 
         private void button8_Click(object sender, EventArgs e)
         {
             GridHelper.UndoChanges(internetShopDataSet);
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var bForm = new BrandGrid(); 
+            if (bForm.ShowDialog() == DialogResult.OK)
+            {
+                Refresh();
+            }
         }
     }
 }

@@ -136,7 +136,7 @@ namespace labs.Grids
             this.productBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productBindingNavigator.Name = "productBindingNavigator";
             this.productBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.productBindingNavigator.Size = new System.Drawing.Size(386, 25);
             this.productBindingNavigator.TabIndex = 0;
             this.productBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -346,7 +346,7 @@ namespace labs.Grids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(386, 214);
             this.Controls.Add(this.productRecepyBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
@@ -360,7 +360,7 @@ namespace labs.Grids
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.productBindingNavigator);
             this.Name = "ProductsDetails";
-            this.Text = "ProductsDetails";
+            this.Text = "Продукты";
             this.Load += new System.EventHandler(this.ProductsDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productBindingNavigator)).EndInit();
             this.productBindingNavigator.ResumeLayout(false);

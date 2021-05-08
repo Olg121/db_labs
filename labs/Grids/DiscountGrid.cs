@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,8 @@ namespace labs.Grids
 
         }
 
-        private void DiscountGrid_Load(object sender, EventArgs e)
+        private void RefreshData()
         {
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.internetShopDataSet.Product);
             // TODO: This line of code loads data into the 'internetShopDataSet.Discount' table. You can move, or remove it, as needed.
             this.discountTableAdapter.Fill(this.internetShopDataSet.Discount);
@@ -40,6 +40,12 @@ namespace labs.Grids
             // TODO: This line of code loads data into the 'internetShopDataSet.Discount' table. You can move, or remove it, as needed.
             this.discountTableAdapter.Fill(this.internetShopDataSet.Discount);
 
+        }
+
+        private void DiscountGrid_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
+            RefreshData();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +123,21 @@ namespace labs.Grids
             Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var dateFrom = $"CAST('{fromDateTimePicker.Value.ToString("dd/MM/yyyy")}' AS DATETIME)" ;
+            var dateTo = $"CAST('{dateTimePicker2.Value.ToString("dd/MM/yyyy")}' AS DATETIME)";
+                                    
+            var productId = (int)productCB.SelectedValue;
+            var discountVal = ((float)discountUpDown.Value) / 100; 
 
+            var connectionString = System.Configuration.ConfigurationManager.
+  ConnectionStrings["labs.Properties.Settings.InternetShopConnectionString"].ConnectionString;
+            var db = new DataContext(connectionString);
+
+            var sql = string.Format("insert into Discount(ProductId, DateFrom, DateTo, Amount) values({0}, {1}, {2}, {3})", productId, dateFrom, dateTo, discountVal.ToString().Replace(',', '.'));
+            db.ExecuteCommand(sql);
+            RefreshData();
+        }
     }
 }

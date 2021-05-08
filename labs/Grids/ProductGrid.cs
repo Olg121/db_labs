@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -111,6 +112,19 @@ namespace labs.Grids
             {
                 Refresh();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var brandId = (int)productCB.SelectedValue;
+            var price = priceCB.Text.Replace(',', '.');
+            var productName = textBox1.Text;
+            var connectionString = System.Configuration.ConfigurationManager.
+  ConnectionStrings["labs.Properties.Settings.InternetShopConnectionString"].ConnectionString;
+            var db = new DataContext(connectionString);
+
+            db.ExecuteCommand("insert into product (BrandNameId, Name, Price) values ({0}, {1}, {2})", brandId, price, productName);
+            Refresh();
         }
     }
 }

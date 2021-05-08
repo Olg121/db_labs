@@ -34,8 +34,6 @@ namespace labs.Grids
             this.brandNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internetShopDataSet = new labs.InternetShopDataSet();
             this.brandNameDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandNameTableAdapter = new labs.InternetShopDataSetTableAdapters.BrandNameTableAdapter();
             this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
             this.button7 = new System.Windows.Forms.Button();
@@ -54,6 +52,8 @@ namespace labs.Grids
             this.brandNameBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.brandNameBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandNameDataGridView)).BeginInit();
@@ -84,20 +84,6 @@ namespace labs.Grids
             this.brandNameDataGridView.Name = "brandNameDataGridView";
             this.brandNameDataGridView.Size = new System.Drawing.Size(500, 280);
             this.brandNameDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // brandNameTableAdapter
             // 
@@ -275,6 +261,20 @@ namespace labs.Grids
             this.brandNameBindingNavigator.TabIndex = 0;
             this.brandNameBindingNavigator.Text = "bindingNavigator1";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Бренд";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
             // BrandGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,7 +285,7 @@ namespace labs.Grids
             this.Controls.Add(this.brandNameDataGridView);
             this.Controls.Add(this.brandNameBindingNavigator);
             this.Name = "BrandGrid";
-            this.Text = "BrandGrid";
+            this.Text = "Бренд";
             this.Load += new System.EventHandler(this.BrandGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.brandNameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).EndInit();
@@ -305,8 +305,6 @@ namespace labs.Grids
         private InternetShopDataSetTableAdapters.BrandNameTableAdapter brandNameTableAdapter;
         private InternetShopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView brandNameDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -323,5 +321,7 @@ namespace labs.Grids
         private System.Windows.Forms.ToolStripButton brandNameBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.BindingNavigator brandNameBindingNavigator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

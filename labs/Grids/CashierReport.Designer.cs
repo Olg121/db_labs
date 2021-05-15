@@ -31,16 +31,26 @@ namespace labs.Grids
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.internetShopDataSet = new labs.InternetShopDataSet();
-            this.internetShopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cashierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internetShopDataSet = new labs.InternetShopDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.internetShopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cashierTableAdapter = new labs.InternetShopDataSetTableAdapters.CashierTableAdapter();
             this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.cashierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cashierBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cashierBindingSource
+            // 
+            this.cashierBindingSource.DataMember = "Cashier";
+            this.cashierBindingSource.DataSource = this.internetShopDataSet;
+            // 
+            // internetShopDataSet
+            // 
+            this.internetShopDataSet.DataSetName = "InternetShopDataSet";
+            this.internetShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -55,20 +65,10 @@ namespace labs.Grids
             this.reportViewer1.Size = new System.Drawing.Size(858, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // internetShopDataSet
-            // 
-            this.internetShopDataSet.DataSetName = "InternetShopDataSet";
-            this.internetShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // internetShopDataSetBindingSource
             // 
             this.internetShopDataSetBindingSource.DataSource = this.internetShopDataSet;
             this.internetShopDataSetBindingSource.Position = 0;
-            // 
-            // cashierBindingSource
-            // 
-            this.cashierBindingSource.DataMember = "Cashier";
-            this.cashierBindingSource.DataSource = this.internetShopDataSet;
             // 
             // cashierTableAdapter
             // 
@@ -92,11 +92,11 @@ namespace labs.Grids
             this.ClientSize = new System.Drawing.Size(858, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CashierReport";
-            this.Text = "CashierReport";
+            this.Text = "Список работников";
             this.Load += new System.EventHandler(this.CashierReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cashierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetShopDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cashierBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

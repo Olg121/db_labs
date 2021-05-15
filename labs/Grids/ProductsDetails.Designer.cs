@@ -36,12 +36,10 @@ namespace labs.Grids
             System.Windows.Forms.Label brandNameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsDetails));
             this.productBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internetShopDataSet = new labs.InternetShopDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -50,7 +48,6 @@ namespace labs.Grids
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.productBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.brandNameTableAdapter = new labs.InternetShopDataSetTableAdapters.BrandNameTableAdapter();
             this.tableAdapterManager = new labs.InternetShopDataSetTableAdapters.TableAdapterManager();
@@ -62,6 +59,8 @@ namespace labs.Grids
             this.brandNameComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.productRecepyBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             priceLabel = new System.Windows.Forms.Label();
@@ -112,10 +111,10 @@ namespace labs.Grids
             // 
             // productBindingNavigator
             // 
-            this.productBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.productBindingNavigator.AddNewItem = null;
             this.productBindingNavigator.BindingSource = this.productBindingSource;
             this.productBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.productBindingNavigator.DeleteItem = null;
             this.productBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -125,10 +124,7 @@ namespace labs.Grids
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.productBindingNavigatorSaveItem});
+            this.bindingNavigatorSeparator2});
             this.productBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.productBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.productBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -139,15 +135,6 @@ namespace labs.Grids
             this.productBindingNavigator.Size = new System.Drawing.Size(386, 25);
             this.productBindingNavigator.TabIndex = 0;
             this.productBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // productBindingSource
             // 
@@ -170,15 +157,6 @@ namespace labs.Grids
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -240,15 +218,6 @@ namespace labs.Grids
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // productBindingNavigatorSaveItem
-            // 
-            this.productBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productBindingNavigatorSaveItem.Image")));
-            this.productBindingNavigatorSaveItem.Name = "productBindingNavigatorSaveItem";
-            this.productBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.productBindingNavigatorSaveItem.Text = "Save Data";
-            this.productBindingNavigatorSaveItem.Click += new System.EventHandler(this.productBindingNavigatorSaveItem_Click_6);
             // 
             // comboBox1
             // 
@@ -342,11 +311,33 @@ namespace labs.Grids
             this.productRecepyBtn.UseVisualStyleBackColor = true;
             this.productRecepyBtn.Click += new System.EventHandler(this.productRecepyBtn_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(226, 40);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Сохранить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(226, 69);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Отмена";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ProductsDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 214);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.productRecepyBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
@@ -360,7 +351,7 @@ namespace labs.Grids
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.productBindingNavigator);
             this.Name = "ProductsDetails";
-            this.Text = "Продукты";
+            this.Text = "Отчет по продукту";
             this.Load += new System.EventHandler(this.ProductsDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productBindingNavigator)).EndInit();
             this.productBindingNavigator.ResumeLayout(false);
@@ -376,9 +367,7 @@ namespace labs.Grids
 
         #endregion
         private System.Windows.Forms.BindingNavigator productBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -387,7 +376,6 @@ namespace labs.Grids
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton productBindingNavigatorSaveItem;
         private System.Windows.Forms.ComboBox comboBox1;
         private InternetShopDataSet internetShopDataSet;
         private System.Windows.Forms.BindingSource brandNameBindingSource;
@@ -402,5 +390,7 @@ namespace labs.Grids
         private System.Windows.Forms.ComboBox brandNameComboBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button productRecepyBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

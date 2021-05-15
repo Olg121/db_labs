@@ -49,7 +49,7 @@ namespace labs.Grids
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ProductRecepy";
-            this.Text = "ProductRecepy";
+            this.Text = "Справка о продукте";
             this.Load += new System.EventHandler(this.ProductRecepy_Load);
             this.ResumeLayout(false);
 

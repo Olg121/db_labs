@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "db", "db\db.csproj", "{D9DE8DAC-6944-4B17-8C4F-82719908A787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labs", "labs\labs.csproj", "{DDE965F5-3E84-4C5F-8803-E461AB8B9FD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libs", "labs\libs.csproj", "{DDE965F5-3E84-4C5F-8803-E461AB8B9FD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShop", "InternetShop\InternetShop.csproj", "{F2B46482-BF37-4F1A-AFBC-EC9E12B681EA}"
 EndProject

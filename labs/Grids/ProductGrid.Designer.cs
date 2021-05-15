@@ -59,6 +59,7 @@ namespace labs.Grids
             this.label4 = new System.Windows.Forms.Label();
             this.brandNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.priceCB = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -93,9 +94,9 @@ namespace labs.Grids
             this.dataGridViewTextBoxColumn4});
             this.productDataGridView.DataSource = this.productBindingSource;
             this.productDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productDataGridView.Location = new System.Drawing.Point(0, 70);
+            this.productDataGridView.Location = new System.Drawing.Point(0, 107);
             this.productDataGridView.Name = "productDataGridView";
-            this.productDataGridView.Size = new System.Drawing.Size(578, 380);
+            this.productDataGridView.Size = new System.Drawing.Size(578, 343);
             this.productDataGridView.TabIndex = 2;
             // 
             // productBindingSource
@@ -118,11 +119,12 @@ namespace labs.Grids
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.comboBox1);
             this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 70);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 107);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // label1
@@ -205,9 +207,9 @@ namespace labs.Grids
             // 
             this.panel3.Controls.Add(this.flowLayoutPanel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(578, 70);
+            this.panel3.Location = new System.Drawing.Point(578, 107);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 380);
+            this.panel3.Size = new System.Drawing.Size(222, 343);
             this.panel3.TabIndex = 20;
             // 
             // flowLayoutPanel2
@@ -223,7 +225,7 @@ namespace labs.Grids
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(222, 380);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(222, 343);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // label2
@@ -276,6 +278,7 @@ namespace labs.Grids
             this.updateProductBtn.TabIndex = 11;
             this.updateProductBtn.Text = "Изм.";
             this.updateProductBtn.UseVisualStyleBackColor = true;
+            this.updateProductBtn.Click += new System.EventHandler(this.updateProductBtn_Click);
             // 
             // countLbl
             // 
@@ -328,6 +331,16 @@ namespace labs.Grids
             this.priceCB.Name = "priceCB";
             this.priceCB.Size = new System.Drawing.Size(195, 20);
             this.priceCB.TabIndex = 18;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 72);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Настроить продукты";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ProductGrid
             // 
@@ -385,5 +398,6 @@ namespace labs.Grids
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource brandNameBindingSource1;
         private System.Windows.Forms.TextBox priceCB;
+        private System.Windows.Forms.Button button3;
     }
 }

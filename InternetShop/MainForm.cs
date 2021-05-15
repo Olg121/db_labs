@@ -26,8 +26,8 @@ namespace InternetShop
         private void Form1_Load(object sender, EventArgs e)
         {
             _welcomeControl = new WelcomeControl() { Dock = DockStyle.Fill };
-          //  Controls.Clear();
-           // Controls.Add(_welcomeControl);
+              Controls.Clear();
+            Controls.Add(_welcomeControl);
             (_welcomeControl as WelcomeControl).ControlClickedEventHandler += _welcomeControl_Click;
         }
 
@@ -72,6 +72,26 @@ namespace InternetShop
         {
             var form = new ProductReceiptsGrid();
             form.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form = new ProductsDetails();
+            form.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var form = new CashierReport();
+            form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form = new ProdutsSalesByDateReport();
+            form.ShowDialog(); 
+            //  var form = new FullReportForm();
+           // form.ShowDialog(); 
         }
     }
 }

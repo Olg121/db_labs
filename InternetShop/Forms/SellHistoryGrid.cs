@@ -86,19 +86,18 @@ namespace InternetShop.Forms
         private void updateProductBtn_Click(object sender, EventArgs e)
         {
             var form = new labs.Grids.ProductGrid();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
+            form.ShowDialog();
+           
                 RefreshData();
-            }
+            
         }
 
         private void updateCashierBtn_Click(object sender, EventArgs e)
         {
             var form = new labs.Grids.CashierGrid();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                RefreshData();
-            }
+            form.ShowDialog();
+             RefreshData();
+           
         }
     }
 }

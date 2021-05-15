@@ -97,5 +97,17 @@ namespace labs.Grids
             reportForm.ShowDialog(this); 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GridHelper.Save(productBindingSource, tableAdapterManager, internetShopDataSet);
+
+            this.Close(); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
     }
 }

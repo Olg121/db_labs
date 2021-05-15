@@ -14,9 +14,12 @@
     }
 }
 
-namespace labs.InternetShopDataSetTableAdapters {
-    
-    
+namespace labs.InternetShopDataSetTableAdapters
+{
+    partial class ReportViewTableAdapter
+    {
+    }
+
     public partial class ProductTableAdapter {
     }
 }

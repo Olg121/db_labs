@@ -29,22 +29,16 @@ namespace labs.Grids
         private void ProductGrid_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            Refresh();
+            RefreshData();
         }
 
-        private void Refresh()
+        private void RefreshData()
         {
+            this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
             this.productTableAdapter.Fill(this.internetShopDataSet.Product);
             // TODO: This line of code loads data into the 'internetShopDataSet.BrandName' table. You can move, or remove it, as needed.
-            this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
             // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
-            // TODO: This line of code loads data into the 'internetShopDataSet.BrandName' table. You can move, or remove it, as needed.
-            this.brandNameTableAdapter.Fill(this.internetShopDataSet.BrandName);
-            // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.internetShopDataSet.Product);
+
 
         }
 
@@ -110,7 +104,7 @@ namespace labs.Grids
             var bForm = new BrandGrid(); 
             if (bForm.ShowDialog() == DialogResult.OK)
             {
-                Refresh();
+                RefreshData();
             }
         }
 
@@ -123,8 +117,24 @@ namespace labs.Grids
   ConnectionStrings["labs.Properties.Settings.InternetShopConnectionString"].ConnectionString;
             var db = new DataContext(connectionString);
 
-            db.ExecuteCommand("insert into product (BrandNameId, Name, Price) values ({0}, {1}, {2})", brandId, price, productName);
-            Refresh();
+            var sql = string.Format("insert into product(Name, BrandNameId, Price) values('{0}', {1}, cast('{2}' as float))",  productName , brandId, price);
+
+            db.ExecuteCommand(sql);
+            RefreshData();
+        }
+
+        private void updateProductBtn_Click(object sender, EventArgs e)
+        {
+            var form = new BrandGrid();
+            form.ShowDialog();
+            RefreshData(); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form = new ProductsDetails();
+            form.ShowDialog();
+            RefreshData();
         }
     }
 }

@@ -55,7 +55,6 @@
     <Compile Include="Controls\WelcomeControl.designer.cs">
       <DependentUpon>WelcomeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\Context.cs" />
     <Compile Include="DbContext\ProceduresContext.cs" />
     <Compile Include="Forms\SellHistoryGrid.cs">
       <SubType>Form</SubType>
@@ -123,9 +122,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\labs\labs.csproj">
+    <ProjectReference Include="..\labs\libs.csproj">
       <Project>{DDE965F5-3E84-4C5F-8803-E461AB8B9FD0}</Project>
-      <Name>labs</Name>
+      <Name>libs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

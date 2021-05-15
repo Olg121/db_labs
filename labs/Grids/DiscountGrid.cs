@@ -46,6 +46,7 @@ namespace labs.Grids
         {
             // TODO: This line of code loads data into the 'internetShopDataSet.Product' table. You can move, or remove it, as needed.
             RefreshData();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,7 +129,7 @@ namespace labs.Grids
             var dateFrom = $"CAST('{fromDateTimePicker.Value.ToString("dd/MM/yyyy")}' AS DATETIME)" ;
             var dateTo = $"CAST('{dateTimePicker2.Value.ToString("dd/MM/yyyy")}' AS DATETIME)";
                                     
-            var productId = (int)productCB.SelectedValue;
+            var productId = (int)comboBox1.SelectedValue;
             var discountVal = ((float)discountUpDown.Value) / 100; 
 
             var connectionString = System.Configuration.ConfigurationManager.
@@ -138,6 +139,15 @@ namespace labs.Grids
             var sql = string.Format("insert into Discount(ProductId, DateFrom, DateTo, Amount) values({0}, {1}, {2}, {3})", productId, dateFrom, dateTo, discountVal.ToString().Replace(',', '.'));
             db.ExecuteCommand(sql);
             RefreshData();
+        }
+
+        private void updateProductBtn_Click(object sender, EventArgs e)
+        {
+            var form = new labs.Grids.ProductGrid();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                RefreshData();
+            }
         }
     }
 }

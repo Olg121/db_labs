@@ -38,6 +38,7 @@ namespace InternetShop
             this.productsSellHistoryBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace InternetShop
             this.cashiersBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -139,6 +139,16 @@ namespace InternetShop
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 339);
             this.panel6.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 45);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Отчет по продуктам";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button6
             // 
@@ -235,16 +245,6 @@ namespace InternetShop
             this.mainPanel.Size = new System.Drawing.Size(709, 373);
             this.mainPanel.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 45);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Отчет по продуктам";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(235, 177);
@@ -262,7 +262,7 @@ namespace InternetShop
             this.ClientSize = new System.Drawing.Size(709, 373);
             this.Controls.Add(this.mainPanel);
             this.Name = "MainForm";
-            this.Text = "Интернет магазин. Климко Олег, 10701118";
+            this.Text = "Интернет магазин. ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

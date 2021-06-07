@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.79306cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.79306cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.79306cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -227,9 +227,8 @@
         </TablixRowHierarchy>
         <DataSetName>CashierDataset</DataSetName>
         <Top>0.88222cm</Top>
-        <Left>0cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.5cm</Width>
+        <Width>14.37917cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -301,13 +300,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>4.35417in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>5.65189cm</Height>
+      <Height>2.42397cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -318,7 +317,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ALEHHH's Internet Shop </Value>
+                  <Value>Internet Shop </Value>
                   <Style>
                     <FontSize>22pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -329,8 +328,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.33196cm</Top>
-          <Left>5cm</Left>
           <Height>1.15562cm</Height>
           <Width>9.72313cm</Width>
           <Style>
@@ -343,21 +340,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>ID20171219112349</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.33196cm</Top>
-          <Left>0.28787cm</Left>
-          <Height>5.28465cm</Height>
-          <Width>4.6063cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
         <Textbox Name="Textbox10">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -377,11 +359,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.66398cm</Top>
-          <Left>5cm</Left>
+          <Top>1.33201cm</Top>
           <Height>0.6cm</Height>
           <Width>4.7225cm</Width>
-          <ZIndex>2</ZIndex>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

@@ -39,57 +39,127 @@ namespace InternetShop
 
         private void cashiersBtn_Click(object sender, EventArgs e)
         {
-            var cashiersForm = new CashierGrid();
-            cashiersForm.ShowDialog();
+            try
+            {
+
+                var cashiersForm = new CashierGrid();
+                cashiersForm.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         
         private void productsSellHistoryBtn_Click(object sender, EventArgs e)
         {
-            var form = new SellHistoryGrid();
-            form.ShowDialog();
+            try
+            {
+
+                var form = new SellHistoryGrid();
+                form.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var form = new ProductGrid();
-            form.ShowDialog();
+            try
+            {
+
+                var form = new ProductGrid();
+                form.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var form = new BrandGrid();
-            form.ShowDialog();
+            try
+            {
+
+                var form = new BrandGrid();
+                form.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var form = new DiscountGrid();
-            form.ShowDialog();
+            try
+            {
+                var form = new DiscountGrid();
+                form.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void productsIncomeHistoryBtn_Click(object sender, EventArgs e)
         {
-            var form = new ProductReceiptsGrid();
-            form.ShowDialog();
+            try
+            {
+                var form = new ProductReceiptsGrid();
+                form.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var form = new ProductsDetails();
-            form.ShowDialog();
+            try
+            {
+                var form = new ProductsDetails();
+                form.ShowDialog();
+
+            }
+            catch
+            {
+
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var form = new CashierReport();
-            form.ShowDialog();
+            try
+            {
+                var form = new CashierReport();
+                form.ShowDialog();
+
+            }
+            catch
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var form = new ProdutsSalesByDateReport();
-            form.ShowDialog(); 
+            try
+            {
+                var form = new ProdutsSalesByDateReport();
+                form.ShowDialog();
+
+            }
+            catch
+            {
+
+            }
             //  var form = new FullReportForm();
            // form.ShowDialog(); 
         }
